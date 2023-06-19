@@ -58,7 +58,7 @@ router.post('/user', async (req, res) => {
 router.get('/user/:id', async (req, res) => {
     const { id } = req.params;
     try {
-        const userbyId = await Product.findById(id);
+        const userbyId = await UserModel.findById(id);
         res.status(200).json(userbyId);
 
     } catch (error) {
